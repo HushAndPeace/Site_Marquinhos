@@ -1,0 +1,358 @@
+@page
+@model FamiliaModel
+@{
+    ViewData["Title"]           = "Rodrigues Jr. | Advocacia em Direito de Família — São Paulo";
+    ViewData["MetaDescription"] = "Divorcios, guarda, pensão alimentícia, inventário e planejamento sucessório. Atendimento especializado em Direito de Família. São Paulo e regiões.";
+    ViewData["Canonical"]       = "https://rodriguesjr.adv.br/familia";
+}
+
+<!-- ── Logo fixo topo-esquerda ──────────────────────────── -->
+<a href="/" class="logo-fixed" aria-label="Rodrigues Jr. Advogados">
+    <img src="/images/logo-transparente.png" alt="Rodrigues Jr. Advogados" class="header-logo">
+</a>
+
+<!-- ── Backdrop do menu mobile ──────────────────────────── -->
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<!-- ── Toggle mobile ────────────────────────────────────── -->
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+</button>
+
+<!-- ── Nav lateral flutuante ────────────────────────────── -->
+<nav class="side-nav" id="mainNav" aria-label="Navegação principal">
+    <a href="#sobre-familia">O Escritório</a>
+    <a href="#areas-familia">Áreas</a>
+    <a href="#como-funciona-familia">Como Funciona</a>
+    <a href="#faq-familia">FAQ</a>
+    <a href="/">Criminal <span class="nav-area-tag">↗</span></a>
+    <a href="#contato-familia" class="btn btn-nav-cta">
+        <span class="btn-text-original">Contato</span>
+        <span class="btn-text-hover">Falar Agora</span>
+    </a>
+</nav>
+
+<!-- ===================== HERO — FAMÍLIA ===================== -->
+<section class="hero">
+    <div class="familia-hero-overlay"></div>
+    <div class="container hero-split">
+
+        <div class="hero-text" data-aos="fade-right" data-aos-delay="100">
+            <span class="tagline">DIREITO DE FAMÍLIA — SÃO PAULO E REGIÕES</span>
+            <h1>
+                Você não está<br>
+                sozinho nessa luta.<br>
+                <em>Há uma saída.</em>
+            </h1>
+            <p class="hero-sub">
+                Conflitos familiares são emocionalmente exaustivos — mas juridicamente
+                têm solução. O escritório Rodrigues Jr. conduz cada caso com estratégia,
+                sigilo e o cuidado que sua família merece.
+            </p>
+            <div class="cta-group">
+                <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+                   class="btn btn-gold" data-gtm-event="hero_whatsapp_familia">
+                    Falar com especialista agora
+                </a>
+                <a href="#sobre-familia" class="btn btn-outline">
+                    Conheça o Escritório
+                </a>
+            </div>
+            <p class="hero-urgency">Atendimento rápido, seguro e sigiloso</p>
+        </div>
+
+        <div class="hero-photo-wrap" data-aos="fade-left" data-aos-delay="200">
+            <div class="hero-photo-frame">
+                <img src="/images/advogado-mesa.png"
+                     alt="Dr. Rodrigues Jr. — Advogado de Família"
+                     class="hero-photo">
+            </div>
+        </div>
+
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats-bar" aria-label="Números do escritório">
+    <div class="container stats-grid">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+            <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Anos de Experiência</span>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="80">
+            <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Famílias Atendidas</span>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="160">
+            <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+            <span class="stat-label">Sigilo Garantido</span>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="240">
+            <span class="stat-number" data-target="2">0</span><span class="stat-suffix">x</span>
+            <span class="stat-label">Mais rápido que a média</span>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SOBRE — FAMÍLIA ===================== -->
+<section id="sobre-familia" class="sobre-section">
+    <div class="container split-layout">
+        <div class="text-block" data-aos="fade-right">
+            <span class="section-eyebrow">O Escritório</span>
+            <h2>Protegemos o que você<br><span class="gold-text">tem de mais valioso</span></h2>
+            <p class="lead-text">
+                Seu patrimônio, seus filhos, seu futuro. Cada caso de família envolve
+                muito mais do que documentos — envolve vidas que precisam continuar.
+            </p>
+            <p>
+                O escritório <strong>Rodrigues Jr. Advogados</strong> atua com a convicção de que
+                conflitos familiares têm solução estratégica. Nossa missão é garantir que
+                o processo ocorra com <strong>segurança jurídica, celeridade e o menor
+                desgaste emocional possível</strong> para você e sua família.
+            </p>
+            <p>
+                Cada caso recebe atenção direta do sócio — sem intermediários,
+                sem respostas genéricas, com transparência total em cada etapa.
+            </p>
+            <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+               class="btn btn-gold" style="margin-top:30px;"
+               data-gtm-event="sobre_cta_familia">
+                Consultar agora
+            </a>
+        </div>
+        <div class="image-block-single" data-aos="fade-left">
+            <img src="/images/advogado-mesa.png" alt="Dr. Rodrigues Jr."
+                 class="img-fit shadow-lg img-portrait">
+        </div>
+    </div>
+</section>
+
+<!-- ===================== ÁREAS — FAMÍLIA ===================== -->
+<section id="areas-familia" class="section bg-image-overlay">
+    <div class="section-overlay-dark"></div>
+    <div class="container relative-z">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Especialidades</span>
+            <h2 class="section-title">Áreas de Atuação</h2>
+            <p style="color:rgba(255,255,255,0.6); margin-top:12px; font-size:1rem;">
+                Soluções estratégicas para proteger seus direitos e garantir um processo justo e seguro.
+            </p>
+        </div>
+        <div class="grid-cards">
+            <div class="card card-familia" data-aos="fade-up" data-aos-delay="0">
+                <div class="card-icon">01</div>
+                <h3>Divórcio</h3>
+                <p>O divórcio pode ser delicado, mas com a estratégia certa garantimos <strong>proteção patrimonial e resolução justa</strong> — consensual ou litigioso.</p>
+            </div>
+            <div class="card card-familia" data-aos="fade-up" data-aos-delay="60">
+                <div class="card-icon">02</div>
+                <h3>Guarda e Convivência</h3>
+                <p>Acordos justos e equilibrados, sempre focando no <strong>melhor interesse das crianças</strong> e na estabilidade da família como um todo.</p>
+            </div>
+            <div class="card card-familia" data-aos="fade-up" data-aos-delay="120">
+                <div class="card-icon">03</div>
+                <h3>Pensão Alimentícia</h3>
+                <p>Assessoria especializada na fixação, revisão, exoneração e execução — conduzida com estratégia e segurança jurídica em cada fase.</p>
+            </div>
+            <div class="card card-familia" data-aos="fade-up" data-aos-delay="180">
+                <div class="card-icon">04</div>
+                <h3>Inventário</h3>
+                <p>Suporte em inventários judiciais e extrajudiciais, garantindo <strong>celeridade, segurança jurídica e redução de custos</strong> e burocracia.</p>
+            </div>
+            <div class="card card-familia" data-aos="fade-up" data-aos-delay="240">
+                <div class="card-icon">05</div>
+                <h3>Dissolução de União Estável</h3>
+                <p>Todas as questões patrimoniais e familiares resolvidas de forma <strong>estratégica e segura</strong> para ambas as partes.</p>
+            </div>
+            <div class="card card-familia" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-icon">06</div>
+                <h3>Planejamento Sucessório</h3>
+                <p>Testamentos, doações e estratégias patrimoniais personalizadas para <strong>garantir a segurança das futuras gerações</strong> com transparência.</p>
+            </div>
+        </div>
+        <div class="section-cta" data-aos="fade-up">
+            <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+               class="btn btn-gold" data-gtm-event="areas_cta_familia">
+                Consultar sobre meu caso
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== COMO FUNCIONA — FAMÍLIA ===================== -->
+<section id="como-funciona-familia" class="steps-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Processo</span>
+            <h2 class="section-title on-white">Como conduzimos<br><span class="gold-text">seu caso</span></h2>
+        </div>
+        <div class="steps-grid">
+            <div class="step-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="step-number">01</div>
+                <h3>Escuta e Análise</h3>
+                <p>
+                    Você nos conta a sua situação — sem pressa, sem julgamentos.
+                    Mapeamos a melhor estratégia jurídica para o seu contexto
+                    específico e a sua família.
+                </p>
+            </div>
+            <div class="step-connector" aria-hidden="true"></div>
+            <div class="step-item" data-aos="fade-up" data-aos-delay="150">
+                <div class="step-number">02</div>
+                <h3>Plano Personalizado</h3>
+                <p>
+                    Criamos um plano detalhado: documentos necessários,
+                    prazos, estratégia processual e o melhor caminho para
+                    <strong>proteger seus direitos</strong> com o mínimo de desgaste.
+                </p>
+            </div>
+            <div class="step-connector" aria-hidden="true"></div>
+            <div class="step-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="step-number">03</div>
+                <h3>Acompanhamento Completo</h3>
+                <p>
+                    Do acordo extrajudicial ao processo judicial, atuamos em
+                    todas as etapas com <strong>clareza e previsibilidade</strong> —
+                    você sempre sabe onde está e o que vem a seguir.
+                </p>
+            </div>
+        </div>
+        <div class="section-cta" data-aos="fade-up">
+            <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+               class="btn btn-gold" data-gtm-event="como_funciona_cta_familia">
+                Iniciar meu caso agora
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FAQ — FAMÍLIA ===================== -->
+<section id="faq-familia" class="faq-section">
+    <div class="container faq-container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Dúvidas</span>
+            <h2 class="section-title">Perguntas <span class="gold-text">Frequentes</span></h2>
+        </div>
+        <div class="faq-list" data-aos="fade-up" data-aos-delay="80">
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Quanto tempo leva um processo de divórcio?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Depende do tipo. O divórcio consensual — quando ambos concordam com os termos — pode ser resolvido em semanas, inclusive por escritura extrajudicial em cartório, sem precisar de processo judicial. O litigioso pode levar meses, dependendo da complexidade das disputas. Atuamos para agilizar ao máximo e evitar desgastes desnecessários em ambos os casos.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    É possível proteger meu patrimônio antes do divórcio?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sim — e quanto antes você agir, mais opções estarão disponíveis. Existem instrumentos jurídicos legítimos para proteção patrimonial que, quando aplicados corretamente, garantem que o processo de dissolução do casamento não comprometa o que você construiu. Essa análise é um dos primeiros passos da nossa consulta.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Como é definida a guarda dos filhos?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>O critério legal é sempre o melhor interesse da criança. Na prática, trabalhamos para construir acordos que preservem o vínculo com ambos os pais e a estabilidade emocional dos filhos. Quando não há acordo, atuamos com firmeza para defender o modelo de guarda que melhor atende à realidade e necessidades da família.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Posso revisar uma pensão alimentícia já definida?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sim. Tanto quem paga quanto quem recebe pode pedir a revisão quando houver mudança significativa na situação financeira de qualquer das partes. Atendemos tanto pedidos de redução quanto de aumento de pensão, sempre com a documentação e estratégia adequadas para cada caso.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    O atendimento é presencial ou online?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>As duas modalidades. Atendemos presencialmente em São Paulo e por videochamada para clientes em outras regiões do estado. A qualidade da assessoria e o sigilo são os mesmos em ambos os formatos — você escolhe o que for mais prático para a sua situação.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    O escritório trata apenas de conflitos ou também de planejamento preventivo?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Os dois. O planejamento sucessório e a estruturação patrimonial preventiva são, muitas vezes, a forma mais inteligente de evitar conflitos futuros. Assessoramos na elaboração de testamentos, doações com reserva de usufruto e outras estratégias que protegem seu patrimônio e facilitam a transmissão para as próximas gerações.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="section-cta" data-aos="fade-up">
+            <p class="cta-pre-text">Sua situação é diferente?</p>
+            <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+               class="btn btn-gold" data-gtm-event="faq_cta_familia">
+                Falar diretamente com o advogado
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== CONTATO ===================== -->
+<footer id="contato-familia" class="footer">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Contato</span>
+            <h2 class="section-title">Atendimento <span class="gold-text">Especializado</span></h2>
+            <p class="footer-sub">Rápido, sigiloso e sem burocracia.</p>
+        </div>
+
+        <div class="contact-split">
+            <div data-aos="fade-right">
+                <div class="info-item">
+                    <strong>WhatsApp</strong>
+                    <a href="tel:+5511987396154" class="info-value">(11) 98739-6154</a>
+                </div>
+                <div class="info-item">
+                    <strong>E-mail</strong>
+                    <a href="mailto:contato@rodriguesjr.adv.br" class="info-value">contato@rodriguesjr.adv.br</a>
+                </div>
+                <div class="info-item">
+                    <strong>Atendimento</strong>
+                    <span class="info-value">Presencial e Online — São Paulo e regiões</span>
+                </div>
+                <div class="contact-cta-group">
+                    <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+                       class="btn btn-gold" data-gtm-event="footer_whatsapp_familia">
+                        Abrir WhatsApp agora
+                    </a>
+                    <a href="mailto:contato@rodriguesjr.adv.br"
+                       class="btn btn-outline-primary" data-gtm-event="footer_email_familia">
+                        Enviar e-mail
+                    </a>
+                </div>
+                <p class="form-disclaimer">Sigilo absoluto garantido por lei.</p>
+            </div>
+
+            <div class="contact-image-block" data-aos="fade-left">
+                <img src="/images/advogado-tel.png"
+                     alt="Dr. Rodrigues Jr. em atendimento"
+                     class="contact-img shadow-md">
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Rodrigues Jr. Advogados. Todos os direitos reservados.
+            <span class="dev-credit">Desenvolvido por Hush Parallel Solutions</span>
+        </div>
+    </div>
+</footer>

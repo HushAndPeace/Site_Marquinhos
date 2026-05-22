@@ -4,44 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO -->
     <title>@(ViewData["Title"] ?? "Rodrigues Jr. | Advocacia Especializada")</title>
     <meta name="description" content="@(ViewData["MetaDescription"] ?? "Defesa técnica e estratégica em Direito Criminal e Família. Plantão 24h. São Paulo e regiões.")">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="@(ViewData["Canonical"] ?? "https://rodriguesjr.adv.br/")">
 
-    <!-- Open Graph -->
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="@(ViewData["Canonical"] ?? "https://rodriguesjr.adv.br/")">
     <meta property="og:title"       content="@(ViewData["Title"] ?? "Rodrigues Jr. | Advocacia Especializada")">
-    <meta property="og:description" content="@(ViewData["MetaDescription"] ?? "Defesa técnica e estratégica. Plantão 24h.")">
+    <meta property="og:description" content="@(ViewData["MetaDescription"] ?? "Defesa técnica. Plantão 24h.")">
     <meta property="og:image"       content="https://rodriguesjr.adv.br/images/og-image.jpg">
     <meta property="og:locale"      content="pt_BR">
-    <meta property="og:site_name"   content="Rodrigues Jr. Advogados">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:title"       content="@(ViewData["Title"] ?? "Rodrigues Jr. | Advocacia Especializada")">
-    <meta name="twitter:description" content="@(ViewData["MetaDescription"] ?? "Plantão Criminal 24h. São Paulo e regiões.")">
+    <meta name="twitter:description" content="@(ViewData["MetaDescription"] ?? "Plantão 24h. São Paulo e regiões.")">
     <meta name="twitter:image"       content="https://rodriguesjr.adv.br/images/og-image.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="~/images/favicon.png">
-    <link rel="apple-touch-icon"      href="~/images/favicon.png">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon"      href="/images/favicon.png">
 
-    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- AOS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="/css/site.css?v=3">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
-
-    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@@context": "https://schema.org",
@@ -50,84 +38,110 @@
       "description": "Escritório boutique de advocacia especializada em Direito Criminal e Direito de Família.",
       "url": "https://rodriguesjr.adv.br",
       "telephone": "+55-11-98739-6154",
-      "email": "contato@@rodriguesjr.adv.br",
       "areaServed": { "@@type": "State", "name": "São Paulo" },
-      "priceRange": "$$$$",
       "openingHours": "Mo-Su 00:00-23:59"
     }
     </script>
 
-    <!-- ANTI-FLASH: aplica tema antes do render -->
+    <!-- Anti-flash: tema aplicado antes do render -->
     <script>
     (function(){
-        var t = localStorage.getItem('rj_theme');
-        if (!t) t = window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', t);
-        var f = localStorage.getItem('rj_font') || 'md';
-        document.documentElement.setAttribute('data-font', f);
+        var t=localStorage.getItem('rj_theme');
+        if(!t) t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';
+        document.documentElement.setAttribute('data-theme',t);
+        var f=localStorage.getItem('rj_font')||'md';
+        document.documentElement.setAttribute('data-font',f);
     })();
     </script>
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','@Config["Tracking:GoogleTagManagerId"]');</script>
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','@Config["Tracking:GoogleTagManagerId"]');</script>
 
     <!-- Meta Pixel -->
-    <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init','@Config["Tracking:MetaPixelId"]');
-    fbq('track','PageView');
-    window._gadsConvId = '@Config["Tracking:GoogleAdsConversionId"]/@Config["Tracking:GoogleAdsConversionLabel"]';
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=@Config["Tracking:MetaPixelId"]&ev=PageView&noscript=1"/></noscript>
+    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','@Config["Tracking:MetaPixelId"]');fbq('track','PageView');window._gadsConvId='@Config["Tracking:GoogleAdsConversionId"]/@Config["Tracking:GoogleAdsConversionLabel"]';</script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=@Config["Tracking:MetaPixelId"]&ev=PageView&noscript=1"/></noscript>
 
     <!-- Google Ads -->
     <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-    <script>
-    window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js',new Date());
-    gtag('config','@Config["Tracking:GoogleAdsConversionId"]');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','@Config["Tracking:GoogleAdsConversionId"]');</script>
 </head>
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=@Config["Tracking:GoogleTagManagerId"]" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- GTM noscript -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=@Config["Tracking:GoogleTagManagerId"]"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
 
-    <!-- Skip link (acessibilidade teclado) -->
-    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    <!-- Barra de progresso de scroll -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-    <!-- ── BARRA DE ACESSIBILIDADE ── -->
-    <div class="a11y-bar" role="toolbar" aria-label="Acessibilidade">
-        <button class="a11y-btn" data-action="theme" title="Alternar modo claro/escuro" aria-label="Alternar tema">🌙</button>
-        <div class="a11y-divider"></div>
-        <button class="a11y-btn" data-action="contrast" title="Alto contraste" aria-label="Alto contraste">HC</button>
-        <div class="a11y-divider"></div>
-        <button class="a11y-btn" data-action="font-sm"  title="Texto menor" aria-label="Diminuir fonte">A−</button>
-        <button class="a11y-btn active" data-action="font-md" title="Texto padrão" aria-label="Fonte padrão">A</button>
-        <button class="a11y-btn" data-action="font-lg"  title="Texto maior" aria-label="Aumentar fonte">A+</button>
-        <button class="a11y-btn" data-action="font-xl"  title="Texto grande" aria-label="Fonte grande">A⁺⁺</button>
+    <!-- ── POPUP DE ACESSIBILIDADE ── -->
+    <button class="a11y-trigger" id="a11yTrigger"
+            aria-label="Abrir configurações de acessibilidade"
+            aria-expanded="false" aria-controls="a11yModal">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="8"  r="1.5" fill="currentColor"/>
+            <path d="M9 11h6M10 11v6M14 11v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+    </button>
+
+    <div class="a11y-backdrop" id="a11yBackdrop" aria-hidden="true"></div>
+
+    <div class="a11y-modal" id="a11yModal"
+         role="dialog" aria-modal="true" aria-label="Configurações de acessibilidade"
+         aria-hidden="true">
+        <div class="a11y-modal-header">
+            <span class="a11y-modal-title">Acessibilidade</span>
+            <button class="a11y-close" id="a11yClose" aria-label="Fechar">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="a11y-section">
+            <span class="a11y-label">Tema</span>
+            <div class="a11y-row">
+                <button class="a11y-opt" data-action="theme-dark"  aria-label="Modo escuro">
+                    <span class="a11y-opt-icon">🌙</span>
+                    <span>Escuro</span>
+                </button>
+                <button class="a11y-opt" data-action="theme-light" aria-label="Modo claro">
+                    <span class="a11y-opt-icon">☀</span>
+                    <span>Claro</span>
+                </button>
+                <button class="a11y-opt" data-action="theme-hc"    aria-label="Alto contraste">
+                    <span class="a11y-opt-icon">◑</span>
+                    <span>Contraste</span>
+                </button>
+            </div>
+        </div>
+        <div class="a11y-section">
+            <span class="a11y-label">Tamanho do texto</span>
+            <div class="a11y-font-row">
+                <button class="a11y-font-btn" data-action="font-sm"  aria-label="Texto menor">A<sup>−</sup></button>
+                <button class="a11y-font-btn" data-action="font-md"  aria-label="Texto padrão">A</button>
+                <button class="a11y-font-btn" data-action="font-lg"  aria-label="Texto maior">A<sup>+</sup></button>
+                <button class="a11y-font-btn" data-action="font-xl"  aria-label="Texto grande">A<sup>++</sup></button>
+            </div>
+        </div>
     </div>
+
+    <!-- WhatsApp flutuante -->
+    <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+       class="wa-float" aria-label="Falar pelo WhatsApp" data-gtm-event="wa_float_click">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.115 1.527 5.845L.057 23.882l6.224-1.634A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.373l-.36-.213-3.694.969.987-3.608-.234-.371A9.818 9.818 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/>
+        </svg>
+        <span class="wa-float-label">Falar agora</span>
+    </a>
 
     <main id="main-content">
         @RenderBody()
     </main>
 
-    <!-- AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Site JS -->
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
+    <script src="/js/site.js?v=3"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

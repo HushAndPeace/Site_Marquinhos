@@ -18,8 +18,6 @@ D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\rjimswa.dswa.cache.json
 D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\scopedcss\bundle\RodriguesJr.Web.styles.css
-D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\compressed\zkz85rgyui-{0}-u7vgy0igb6-u7vgy0igb6.gz
-D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\compressed\83a5e4kyn1-{0}-4oeg7gkk5f-4oeg7gkk5f.gz
 D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\staticwebassets.build.json
 D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\staticwebassets.build.json.cache
 D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\staticwebassets.development.json
@@ -30,3 +28,6 @@ D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\refint\RodriguesJr.Web.dll
 D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\RodriguesJr.Web.pdb
 D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\RodriguesJr.Web.genruntimeconfig.cache
 D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\ref\RodriguesJr.Web.dll
+D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\RodriguesJr.Web.sourcelink.json
+D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\compressed\83a5e4kyn1-{0}-bythih08m3-bythih08m3.gz
+D:\Site_Marquinhos\RodriguesJr.Web\obj\Debug\net10.0\compressed\zkz85rgyui-{0}-ruj0bdhyq1-ruj0bdhyq1.gz

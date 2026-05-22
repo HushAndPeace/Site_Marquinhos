@@ -1,0 +1,26 @@
+## .NET / ASP.NET Core
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.userprefs
+*.DS_Store
+
+## Publish output
+publish/
+out/
+
+## Segredos — NUNCA commitar com IDs reais de produção
+# appsettings.Production.json  ← descomente se guardar IDs reais aqui
+
+## Logs
+*.log
+logs/
+
+## Node (caso use npm para assets)
+node_modules/
+
+## Variáveis de ambiente locais
+.env
+.env.local

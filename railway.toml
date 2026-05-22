@@ -1,0 +1,13 @@
+# Railway deployment — Rodrigues Jr. Advogados
+# Docs: https://docs.railway.app/reference/config-as-code
+
+[build]
+builder = "nixpacks"
+
+[deploy]
+# Railway injeta $PORT; Program.cs lê e passa para UseUrls()
+# Nixpacks detecta .NET 10 automaticamente e executa dotnet publish + run
+healthcheckPath = "/"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3

@@ -1,113 +1,149 @@
 @page
 @model IndexModel
 @{
-    ViewData["Title"] = "Rodrigues Jr. | Advocacia Criminal Especializada";
+    ViewData["Title"]           = "Rodrigues Jr. | Advocacia Criminal Especializada — São Paulo";
+    ViewData["MetaDescription"] = "Defesa criminal técnica e estratégica. Plantão 24h, flagrante, HC e Tribunais Superiores. São Paulo e regiões.";
+    ViewData["Canonical"]       = "https://rodriguesjr.adv.br/";
 }
 
-<!-- ===================== HEADER ===================== -->
-<header class="header" id="header">
-    <div class="container header-content">
-        <a href="#" class="logo-link">
-            <img src="~/images/logo.png" alt="Rodrigues Jr. Advogados" class="header-logo">
-        </a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-            <span></span><span></span><span></span>
-        </button>
-        <nav id="mainNav">
-            <a href="#sobre">A Banca</a>
-            <a href="#atuacao">Atuação</a>
-            <a href="#como-funciona">Como Funciona</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contato" class="btn btn-nav-cta">
-                <span class="btn-text-original">Contato</span>
-                <span class="btn-text-hover">Falar Agora</span>
-            </a>
-        </nav>
-    </div>
-</header>
+<!-- ── Logo fixo topo-esquerda ──────────────────────────── -->
+<a href="/" class="logo-fixed" aria-label="Rodrigues Jr. Advogados">
+    <img src="/images/logo-transparente.png" alt="Rodrigues Jr. Advogados" class="header-logo">
+</a>
 
-<!-- ===================== HERO ===================== -->
+<!-- ── Backdrop do menu mobile ──────────────────────────── -->
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<!-- ── Toggle mobile ────────────────────────────────────── -->
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+</button>
+
+<!-- ── Nav lateral flutuante ────────────────────────────── -->
+<nav class="side-nav" id="mainNav" aria-label="Navegação principal">
+    <a href="#sobre">A Banca</a>
+    <a href="#atuacao">Atuação</a>
+    <a href="#como-funciona">Como Funciona</a>
+    <a href="#faq">FAQ</a>
+    <a href="/familia">Família <span class="nav-area-tag">Novo</span></a>
+    <a href="#contato" class="btn btn-nav-cta">
+        <span class="btn-text-original">Contato</span>
+        <span class="btn-text-hover">Falar Agora</span>
+    </a>
+</nav>
+
+<!-- ===================== HERO — SPLIT NLP ===================== -->
 <section class="hero">
     <div class="hero-overlay"></div>
-    <div class="container hero-content">
-        <span class="tagline" data-aos="fade-up" data-aos-delay="100">DEFESA TÉCNICA E ESTRATÉGICA</span>
-        <h1 data-aos="fade-up" data-aos-delay="200">
-            Excelência em<br>
-            <span class="gold-text">Direito Criminal</span>
-        </h1>
-        <p class="hero-sub" data-aos="fade-up" data-aos-delay="300">
-            Atuação combativa e sigilosa nos Tribunais Superiores e Estaduais.<br>
-            Plantão 24 horas — porque uma prisão não escolhe hora.
-        </p>
-        <div class="cta-group" data-aos="fade-up" data-aos-delay="400">
-            <a href="#contato" class="btn btn-gold cta-whatsapp" data-gtm-event="hero_cta_click">
-                Falar com Advogado Agora
-            </a>
-            <a href="#sobre" class="btn btn-outline-white">
-                Conheça a Banca
-            </a>
+    <div class="container hero-split">
+
+        <div class="hero-text" data-aos="fade-right" data-aos-delay="100">
+            <span class="tagline">PLANTÃO CRIMINAL — 24H</span>
+            <h1>
+                Você recebeu uma intimação.<br>
+                Ou alguém que ama<br>
+                <em>foi preso agora.</em>
+            </h1>
+            <p class="hero-sub">
+                Cada hora sem defesa especializada é liberdade entregue ao sistema.
+            </p>
+            <p class="hero-sub hero-sub-2">
+                O escritório Rodrigues Jr. atua de forma imediata — do flagrante ao STJ.
+            </p>
+            <div class="cta-group">
+                <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+                   class="btn btn-gold" data-gtm-event="hero_whatsapp_criminal">
+                    Proteger meus direitos agora
+                </a>
+                <a href="#sobre" class="btn btn-outline">
+                    Conheça a Banca
+                </a>
+            </div>
+            <p class="hero-urgency">Advogado disponível agora</p>
         </div>
+
+        <div class="hero-photo-wrap" data-aos="fade-left" data-aos-delay="200">
+            <div class="hero-photo-frame">
+                <img src="/images/advogado-mesa.png"
+                     alt="Dr. Rodrigues Jr. — Advogado Criminal"
+                     class="hero-photo">
+            </div>
+        </div>
+
     </div>
-    <div class="hero-scroll-hint">
-        <span></span>
-    </div>
+    <div class="hero-scroll-hint" aria-hidden="true"><span></span></div>
 </section>
 
-<!-- ===================== NÚMEROS ===================== -->
-<section class="section stats-bar">
+<!-- ===================== PILARES ===================== -->
+<section class="stats-bar" aria-label="Diferenciais do escritório">
     <div class="container stats-grid">
         <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
-            <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
-            <span class="stat-label">Anos de Experiência</span>
+            <span class="stat-badge">24h</span>
+            <strong class="stat-title">Plantão Ativo</strong>
+            <span class="stat-desc">Você fala direto com o Dr. Rodrigues Jr. — sem triagem, sem espera</span>
         </div>
-        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-            <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
-            <span class="stat-label">Casos Defendidos</span>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="80">
+            <span class="stat-badge">STJ</span>
+            <strong class="stat-title">Do Flagrante ao Supremo</strong>
+            <span class="stat-desc">Atuação em todas as fases, sem delegar estratégia a terceiros</span>
         </div>
-        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-            <span class="stat-number" data-target="3">0</span><span class="stat-suffix"></span>
-            <span class="stat-label">Tribunais Superiores</span>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="160">
+            <span class="stat-badge">1:1</span>
+            <strong class="stat-title">Atenção Exclusiva</strong>
+            <span class="stat-desc">Casos limitados — o sócio cuida do seu processo, do início ao fim</span>
         </div>
-        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-            <span class="stat-number" data-target="24">0</span><span class="stat-suffix">h</span>
-            <span class="stat-label">Plantão Criminal</span>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="240">
+            <span class="stat-badge">§</span>
+            <strong class="stat-title">Sigilo Absoluto</strong>
+            <span class="stat-desc">Protegido por lei — tudo que você compartilha fica entre nós</span>
         </div>
     </div>
 </section>
 
 <!-- ===================== SOBRE ===================== -->
-<section id="sobre" class="section white-bg">
-    <div class="container split-layout align-center">
+<section id="sobre" class="sobre-section">
+    <div class="container split-layout">
         <div class="text-block" data-aos="fade-right">
             <span class="section-eyebrow">A Banca</span>
             <h2>Defesa Técnica e<br><span class="gold-text">Dedicada</span></h2>
             <p class="lead-text">
-                A excelência no Direito Criminal exige mais do que conhecimento jurídico — exige estratégia, combatividade e dedicação exclusiva.
+                A excelência no Direito Criminal exige mais do que conhecimento jurídico —
+                exige estratégia, combatividade e dedicação irrestrita.
             </p>
             <p>
-                O escritório <strong>Rodrigues Jr. Advogados</strong> pauta sua atuação na exclusividade boutique. Limitamos rigorosamente o número de casos ativos para assegurar que cada cliente receba a <strong>dedicação direta e irrestrita do sócio</strong> — sem terceirização, sem auxiliares, sem surpresas.
+                O escritório <strong>Rodrigues Jr. Advogados</strong> atua no modelo boutique:
+                o número de casos é limitado rigorosamente para que cada cliente tenha o sócio
+                dedicado exclusivamente à sua defesa — sem assistentes respondendo por você,
+                sem terceirização de estratégia.
             </p>
-            <a href="#contato" class="btn btn-gold cta-whatsapp" style="margin-top: 30px;" data-gtm-event="sobre_cta_click">
-                Consultar Agora
+            <p>
+                Do inquérito policial ao Supremo Tribunal Federal, cada fase é acompanhada
+                com a mesma combatividade e sigilo que o seu caso exige.
+            </p>
+            <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+               class="btn btn-gold" style="margin-top:30px;"
+               data-gtm-event="sobre_cta_criminal">
+                Consultar agora
             </a>
         </div>
         <div class="image-block-single" data-aos="fade-left">
-            <img src="~/images/advogado-main.png" alt="Dr. Rodrigues Jr." class="img-fit shadow-lg img-portrait">
+            <img src="/images/advogado-tel.png" alt="Dr. Rodrigues Jr."
+                 class="img-fit shadow-lg img-portrait">
         </div>
     </div>
 </section>
 
-<!-- ===================== POR QUE NOS ESCOLHER ===================== -->
-<section class="section bg-dark-section">
+<!-- ===================== DIFERENCIAIS ===================== -->
+<section class="section dark-section">
     <div class="container">
         <div class="section-header" data-aos="fade-up">
-            <span class="section-eyebrow light">Diferenciais</span>
-            <h2 class="section-title text-light">Por que escolher a<br><span class="gold-text">Rodrigues Jr. Advogados</span></h2>
+            <span class="section-eyebrow">Por que nos escolher</span>
+            <h2 class="section-title">Diferenciais que <span class="gold-text">fazem a diferença</span></h2>
         </div>
         <div class="diferenciais-grid">
             <div class="diferencial-item" data-aos="fade-up" data-aos-delay="0">
                 <div class="diferencial-icon">
-                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M20 4L24.9 14.1L36 15.7L28 23.5L29.8 34.6L20 29.4L10.2 34.6L12 23.5L4 15.7L15.1 14.1L20 4Z" stroke="#C5A059" stroke-width="2" stroke-linejoin="round"/>
                     </svg>
                 </div>
@@ -116,29 +152,27 @@
             </div>
             <div class="diferencial-item" data-aos="fade-up" data-aos-delay="100">
                 <div class="diferencial-icon">
-                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <rect x="4" y="8" width="32" height="24" rx="2" stroke="#C5A059" stroke-width="2"/>
-                        <path d="M4 14H36" stroke="#C5A059" stroke-width="2"/>
-                        <path d="M12 22H20" stroke="#C5A059" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M12 26H16" stroke="#C5A059" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 14H36M12 22H20M12 26H16" stroke="#C5A059" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </div>
                 <h3>Atuação Combativa</h3>
-                <p>Presença ativa desde o inquérito até a sustentação oral no STJ e STF — sem ceder terreno em nenhuma etapa.</p>
+                <p>Presença ativa desde o inquérito até a sustentação oral no STJ e STF — sem ceder terreno em nenhuma fase.</p>
             </div>
             <div class="diferencial-item" data-aos="fade-up" data-aos-delay="200">
                 <div class="diferencial-icon">
-                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <circle cx="20" cy="20" r="14" stroke="#C5A059" stroke-width="2"/>
                         <path d="M20 12V20L26 24" stroke="#C5A059" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </div>
-                <h3>Plantão Criminal 24h</h3>
-                <p>Uma prisão em flagrante não espera o horário comercial. Atendimento imediato, qualquer dia, qualquer hora.</p>
+                <h3>Plantão 24h</h3>
+                <p>Uma prisão em flagrante não espera horário comercial. Atendimento imediato, qualquer dia, qualquer hora.</p>
             </div>
             <div class="diferencial-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="diferencial-icon">
-                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M20 6C14 6 8 12 8 20C8 28 14 34 20 34C26 34 32 28 32 20" stroke="#C5A059" stroke-width="2" stroke-linecap="round"/>
                         <path d="M26 6L32 12L20 24L14 18" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -155,62 +189,65 @@
     <div class="section-overlay-dark"></div>
     <div class="container relative-z">
         <div class="section-header" data-aos="fade-up">
-            <span class="section-eyebrow light">Especialidades</span>
-            <h2 class="section-title text-light">Áreas de Atuação</h2>
+            <span class="section-eyebrow">Especialidades</span>
+            <h2 class="section-title">Áreas de Atuação</h2>
         </div>
         <div class="grid-cards">
-            <div class="card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card card-highlight" data-aos="fade-up" data-aos-delay="0">
+                <div class="card-icon">24h</div>
+                <h3>Plantão Criminal</h3>
+                <p>Atendimento imediato a qualquer hora. Porque a liberdade não pode esperar o horário comercial.</p>
+            </div>
+            <div class="card card-highlight" data-aos="fade-up" data-aos-delay="60">
+                <div class="card-icon">⚡</div>
+                <h3>Flagrante Criminal</h3>
+                <p>Presença do advogado na delegacia ou no local do crime. Atuação imediata nas primeiras horas — as mais decisivas.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="120">
                 <div class="card-icon">01</div>
                 <h3>Inquérito Policial</h3>
                 <p>Acompanhamento de oitivas e defesa técnica visando o arquivamento do inquérito antes da denúncia.</p>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="50">
+            <div class="card" data-aos="fade-up" data-aos-delay="180">
                 <div class="card-icon">02</div>
                 <h3>Liberdade (HC)</h3>
                 <p>Manejo urgente de Habeas Corpus e pedidos de Revogação de Prisão Preventiva em qualquer instância.</p>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card" data-aos="fade-up" data-aos-delay="240">
                 <div class="card-icon">03</div>
-                <h3>Direito Penal Econômico</h3>
-                <p>Defesa em crimes tributários, sistema financeiro, corrupção e lavagem de capitais.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="150">
-                <div class="card-icon">04</div>
                 <h3>Tribunais Superiores</h3>
                 <p>Recursos ao STJ e STF com sustentação oral presencial em Brasília.</p>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="200">
-                <div class="card-icon">05</div>
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-icon">04</div>
                 <h3>Tribunal do Júri</h3>
                 <p>Defesa plenária em crimes dolosos contra a vida com oratória combativa e estratégia de teses.</p>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="250">
-                <div class="card-icon">06</div>
-                <h3>Crimes Digitais</h3>
-                <p>Defesa em delitos informáticos, fraudes eletrônicas e crimes cometidos em ambiente digital.</p>
-            </div>
         </div>
         <div class="section-cta" data-aos="fade-up">
-            <a href="#contato" class="btn btn-gold cta-whatsapp" data-gtm-event="atuacao_cta_click">
-                Consultar sobre seu caso
+            <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+               class="btn btn-gold" data-gtm-event="atuacao_cta_criminal">
+                Falar sobre meu caso agora
             </a>
         </div>
     </div>
 </section>
 
 <!-- ===================== COMO FUNCIONA ===================== -->
-<section id="como-funciona" class="section white-bg">
+<section id="como-funciona" class="steps-section">
     <div class="container">
         <div class="section-header" data-aos="fade-up">
             <span class="section-eyebrow">Processo</span>
-            <h2 class="section-title text-primary">Como Funciona<br><span class="gold-text">sua Defesa</span></h2>
+            <h2 class="section-title on-white">Como funciona<br><span class="gold-text">sua defesa</span></h2>
         </div>
         <div class="steps-grid">
             <div class="step-item" data-aos="fade-up" data-aos-delay="0">
                 <div class="step-number">01</div>
-                <h3>Contato e Análise Inicial</h3>
+                <h3>Contato Imediato</h3>
                 <p>
-                    Você nos aciona pelo WhatsApp, a qualquer hora. Em poucos minutos, o Dr. Rodrigues Jr. avalia a situação e mapeia as <strong>ações urgentes de defesa</strong> necessárias — sem burocracia, sem espera.
+                    Você nos aciona pelo WhatsApp a qualquer hora. Em minutos, o Dr. Rodrigues Jr.
+                    avalia a situação e mapeia as <strong>ações urgentes de defesa</strong> —
+                    sem burocracia, sem espera.
                 </p>
             </div>
             <div class="step-connector" aria-hidden="true"></div>
@@ -218,99 +255,104 @@
                 <div class="step-number">02</div>
                 <h3>Diagnóstico e Estratégia</h3>
                 <p>
-                    Com o caso em mãos, construímos um <strong>plano estratégico exclusivo</strong>: quais documentos são necessários, quais teses são aplicáveis e qual é o melhor caminho para o seu desfecho.
+                    Com o caso em mãos, construímos um <strong>plano exclusivo</strong>:
+                    quais documentos são necessários, quais teses aplicar
+                    e qual o melhor caminho para o seu desfecho.
                 </p>
             </div>
             <div class="step-connector" aria-hidden="true"></div>
             <div class="step-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="step-number">03</div>
-                <h3>Defesa Ativa em Todas as Instâncias</h3>
+                <h3>Defesa em Todas as Instâncias</h3>
                 <p>
-                    Do inquérito policial aos Tribunais Superiores, atuamos com combatividade em cada etapa — com <strong>transparência total</strong> sobre o andamento e as perspectivas do caso.
+                    Do inquérito policial aos Tribunais Superiores, atuamos com combatividade —
+                    com <strong>transparência total</strong> sobre andamento e perspectivas.
                 </p>
             </div>
         </div>
         <div class="section-cta" data-aos="fade-up">
-            <a href="#contato" class="btn btn-gold cta-whatsapp" data-gtm-event="como_funciona_cta_click">
+            <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+               class="btn btn-gold" data-gtm-event="como_funciona_cta">
                 Iniciar minha defesa agora
             </a>
         </div>
     </div>
 </section>
 
-<!-- ===================== FAQ — NEUROLINGUÍSTICA ===================== -->
-<section id="faq" class="section bg-dark-section">
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="faq-section">
     <div class="container faq-container">
         <div class="section-header" data-aos="fade-up">
-            <span class="section-eyebrow light">Dúvidas</span>
-            <h2 class="section-title text-light">Perguntas <span class="gold-text">Frequentes</span></h2>
+            <span class="section-eyebrow">Dúvidas</span>
+            <h2 class="section-title">Perguntas <span class="gold-text">Frequentes</span></h2>
         </div>
-        <div class="faq-list" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-list" data-aos="fade-up" data-aos-delay="80">
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    Meu caso é grave. Ainda há possibilidade de uma defesa eficaz?
-                    <span class="faq-icon"></span>
+                    Meu caso é grave. Ainda há possibilidade de defesa?
+                    <span class="faq-icon" aria-hidden="true"></span>
                 </button>
                 <div class="faq-answer">
-                    <p>Sim — e quanto mais cedo você agir, maiores as possibilidades. Todo acusado tem direito constitucional a uma defesa técnica de qualidade, independentemente da complexidade do caso. Nossa função é exatamente encontrar as brechas, as teses e os argumentos que fazem diferença entre uma condenação e uma absolvição. Casos graves exigem advogados experientes, não advogados convencionais.</p>
+                    <p>Sim — e quanto mais cedo você agir, maiores as possibilidades. Todo acusado tem direito constitucional a uma defesa técnica de qualidade, independentemente da gravidade do caso. Casos graves exigem advogados experientes, não convencionais. Nossa função é exatamente encontrar as brechas, teses e argumentos que fazem a diferença entre uma condenação e uma absolvição.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     Qual é o momento certo para contratar um advogado criminal?
-                    <span class="faq-icon"></span>
+                    <span class="faq-icon" aria-hidden="true"></span>
                 </button>
                 <div class="faq-answer">
-                    <p>Agora. A defesa mais eficaz começa antes do processo — no inquérito policial, antes da primeira oitiva. Cada declaração, cada documento entregue sem acompanhamento jurídico pode comprometer a defesa futura. Quem espera o processo chegar às mãos já cedeu terreno desnecessariamente.</p>
+                    <p>Agora. A defesa mais eficaz começa antes do processo — no inquérito policial, antes da primeira oitiva. Cada declaração e cada documento entregues sem acompanhamento jurídico podem comprometer a defesa futura. Quem espera o processo chegar às mãos já cedeu terreno desnecessariamente.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    Como funciona a primeira consulta? Preciso me preparar?
-                    <span class="faq-icon"></span>
+                    Posso chamar o advogado durante um flagrante?
+                    <span class="faq-icon" aria-hidden="true"></span>
                 </button>
                 <div class="faq-answer">
-                    <p>A primeira conversa é sigilosa, direta e sem julgamentos. Você relata os fatos, e nós analisamos as possibilidades concretas de defesa. Não é necessário trazer documentos nesse primeiro momento — o mais importante é entendermos a situação. Toda a comunicação é protegida pelo sigilo profissional.</p>
+                    <p>Sim, e você deve. É um direito constitucional inegociável. O Dr. Rodrigues Jr. atende no plantão 24h e pode comparecer pessoalmente à delegacia ou ao local da ocorrência nas primeiras horas — que são as mais decisivas para evitar uma prisão preventiva e garantir que nenhuma declaração prejudique a defesa futura.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Como funciona a primeira consulta?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>É sigilosa, direta e sem julgamentos. Você relata os fatos e nós analisamos as possibilidades concretas de defesa. Não é necessário trazer documentos nesse primeiro momento — o mais importante é entendermos a situação. Toda a comunicação é protegida pelo sigilo profissional absoluto.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     Vocês atendem em qualquer fase do processo?
-                    <span class="faq-icon"></span>
+                    <span class="faq-icon" aria-hidden="true"></span>
                 </button>
                 <div class="faq-answer">
-                    <p>Sim. Seja no inquérito policial, na instrução processual, no julgamento, no Tribunal de Justiça ou nos Tribunais Superiores (STJ e STF), podemos assumir sua defesa. Mesmo que outra banca já esteja atuando, é possível trocar o advogado a qualquer momento se você sentir que a defesa não está sendo conduzida com a combatividade que o caso exige.</p>
+                    <p>Sim. Seja no inquérito, na instrução processual, no julgamento, no Tribunal de Justiça ou nos Tribunais Superiores, podemos assumir a defesa. Mesmo que outro advogado já esteja atuando, é possível trocar a qualquer momento — se você sentir que a defesa não está sendo conduzida com a combatividade que o caso exige.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    O atendimento é sigiloso? Minha família pode ficar sabendo?
-                    <span class="faq-icon"></span>
+                    O atendimento é sigiloso? Minha família precisa saber?
+                    <span class="faq-icon" aria-hidden="true"></span>
                 </button>
                 <div class="faq-answer">
-                    <p>O sigilo advogado-cliente é absoluto e garantido por lei — é um dos pilares mais sólidos do nosso sistema jurídico. Nenhuma informação que você compartilhar conosco será divulgada sem a sua autorização. Trabalhamos com total discrição, inclusive na forma de comunicação e nos horários de atendimento.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    Vocês atendem fora de São Paulo ou em fins de semana?
-                    <span class="faq-icon"></span>
-                </button>
-                <div class="faq-answer">
-                    <p>Sim. Atuamos em todo o território nacional, com presença regular em Brasília para sustentações orais no STJ e STF. O plantão criminal funciona 24 horas, 7 dias por semana — inclusive feriados. Uma prisão em flagrante não respeita o calendário, e nossa equipe também não.</p>
+                    <p>O sigilo advogado-cliente é absoluto e garantido por lei. Nenhuma informação que você compartilhar será divulgada sem sua autorização. Trabalhamos com total discrição — inclusive na forma de comunicação e nos horários de atendimento.</p>
                 </div>
             </div>
 
         </div>
         <div class="section-cta" data-aos="fade-up">
-            <p class="cta-pre-text">Sua pergunta não está aqui?</p>
-            <a href="#contato" class="btn btn-gold cta-whatsapp" data-gtm-event="faq_cta_click">
+            <p class="cta-pre-text">Sua dúvida não está aqui?</p>
+            <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
+               class="btn btn-gold" data-gtm-event="faq_cta_criminal">
                 Falar diretamente com o advogado
             </a>
         </div>
@@ -321,13 +363,13 @@
 <footer id="contato" class="footer">
     <div class="container">
         <div class="section-header" data-aos="fade-up">
-            <span class="section-eyebrow light">Contato</span>
-            <h2 class="section-title" style="color: #F5F5F5;">Plantão Criminal <span class="gold-text">24h</span></h2>
+            <span class="section-eyebrow">Contato</span>
+            <h2 class="section-title">Plantão Criminal <span class="gold-text">24h</span></h2>
             <p class="footer-sub">Atendimento imediato. Sem burocracia, sem espera.</p>
         </div>
 
-        <div class="contact-split" data-aos="fade-up">
-            <div class="contact-info-block">
+        <div class="contact-split">
+            <div data-aos="fade-right">
                 <div class="info-item">
                     <strong>WhatsApp</strong>
                     <a href="tel:+5511987396154" class="info-value">(11) 98739-6154</a>
@@ -342,14 +384,15 @@
                 </div>
                 <div class="info-item">
                     <strong>Atuação</strong>
-                    <span class="info-value">São Paulo e Tribunais Superiores (Brasília)</span>
+                    <span class="info-value">São Paulo e regiões</span>
                 </div>
                 <div class="contact-cta-group">
                     <a href="https://wa.me/5511987396154" target="_blank" rel="noopener noreferrer"
-                       class="btn btn-gold cta-whatsapp" data-gtm-event="contato_whatsapp_direto">
-                        Falar agora pelo WhatsApp
+                       class="btn btn-gold" data-gtm-event="footer_whatsapp_criminal">
+                        Abrir WhatsApp agora
                     </a>
-                    <a href="mailto:contato@rodriguesjr.adv.br" class="btn btn-outline-white cta-email" data-gtm-event="contato_email">
+                    <a href="mailto:contato@rodriguesjr.adv.br"
+                       class="btn btn-outline-primary" data-gtm-event="footer_email_criminal">
                         Enviar e-mail
                     </a>
                 </div>
@@ -357,12 +400,15 @@
             </div>
 
             <div class="contact-image-block" data-aos="fade-left">
-                <img src="~/images/advogado-tel.png" alt="Dr. Rodrigues Jr. em atendimento" class="img-fit shadow-md contact-img">
+                <img src="/images/advogado-tel.png"
+                     alt="Dr. Rodrigues Jr. em atendimento"
+                     class="contact-img shadow-md">
             </div>
         </div>
 
         <div class="copyright">
             &copy; 2026 Rodrigues Jr. Advogados. Todos os direitos reservados.
+            <span class="dev-credit">Desenvolvido por Hush Parallel Solutions</span>
         </div>
     </div>
 </footer>
