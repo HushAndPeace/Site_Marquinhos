@@ -1,0 +1,133 @@
+@inject Microsoft.Extensions.Configuration.IConfiguration Config
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>@(ViewData["Title"] ?? "Rodrigues Jr. | Advocacia Especializada")</title>
+    <meta name="description" content="@(ViewData["MetaDescription"] ?? "Defesa técnica e estratégica em Direito Criminal e Família. Plantão 24h. São Paulo e regiões.")">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="@(ViewData["Canonical"] ?? "https://rodriguesjr.adv.br/")">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="@(ViewData["Canonical"] ?? "https://rodriguesjr.adv.br/")">
+    <meta property="og:title"       content="@(ViewData["Title"] ?? "Rodrigues Jr. | Advocacia Especializada")">
+    <meta property="og:description" content="@(ViewData["MetaDescription"] ?? "Defesa técnica e estratégica. Plantão 24h.")">
+    <meta property="og:image"       content="https://rodriguesjr.adv.br/images/og-image.jpg">
+    <meta property="og:locale"      content="pt_BR">
+    <meta property="og:site_name"   content="Rodrigues Jr. Advogados">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="@(ViewData["Title"] ?? "Rodrigues Jr. | Advocacia Especializada")">
+    <meta name="twitter:description" content="@(ViewData["MetaDescription"] ?? "Plantão Criminal 24h. São Paulo e regiões.")">
+    <meta name="twitter:image"       content="https://rodriguesjr.adv.br/images/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="~/images/favicon.png">
+    <link rel="apple-touch-icon"      href="~/images/favicon.png">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "LegalService",
+      "name": "Rodrigues Jr. Advogados",
+      "description": "Escritório boutique de advocacia especializada em Direito Criminal e Direito de Família.",
+      "url": "https://rodriguesjr.adv.br",
+      "telephone": "+55-11-98739-6154",
+      "email": "contato@@rodriguesjr.adv.br",
+      "areaServed": { "@@type": "State", "name": "São Paulo" },
+      "priceRange": "$$$$",
+      "openingHours": "Mo-Su 00:00-23:59"
+    }
+    </script>
+
+    <!-- ANTI-FLASH: aplica tema antes do render -->
+    <script>
+    (function(){
+        var t = localStorage.getItem('rj_theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+        var f = localStorage.getItem('rj_font') || 'md';
+        document.documentElement.setAttribute('data-font', f);
+    })();
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','@Config["Tracking:GoogleTagManagerId"]');</script>
+
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','@Config["Tracking:MetaPixelId"]');
+    fbq('track','PageView');
+    window._gadsConvId = '@Config["Tracking:GoogleAdsConversionId"]/@Config["Tracking:GoogleAdsConversionLabel"]';
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=@Config["Tracking:MetaPixelId"]&ev=PageView&noscript=1"/></noscript>
+
+    <!-- Google Ads -->
+    <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date());
+    gtag('config','@Config["Tracking:GoogleAdsConversionId"]');
+    </script>
+</head>
+<body>
+
+    <!-- GTM noscript -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=@Config["Tracking:GoogleTagManagerId"]"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Skip link (acessibilidade teclado) -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- ── BARRA DE ACESSIBILIDADE ── -->
+    <div class="a11y-bar" role="toolbar" aria-label="Acessibilidade">
+        <button class="a11y-btn" data-action="theme" title="Alternar modo claro/escuro" aria-label="Alternar tema">🌙</button>
+        <div class="a11y-divider"></div>
+        <button class="a11y-btn" data-action="contrast" title="Alto contraste" aria-label="Alto contraste">HC</button>
+        <div class="a11y-divider"></div>
+        <button class="a11y-btn" data-action="font-sm"  title="Texto menor" aria-label="Diminuir fonte">A−</button>
+        <button class="a11y-btn active" data-action="font-md" title="Texto padrão" aria-label="Fonte padrão">A</button>
+        <button class="a11y-btn" data-action="font-lg"  title="Texto maior" aria-label="Aumentar fonte">A+</button>
+        <button class="a11y-btn" data-action="font-xl"  title="Texto grande" aria-label="Fonte grande">A⁺⁺</button>
+    </div>
+
+    <main id="main-content">
+        @RenderBody()
+    </main>
+
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Site JS -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

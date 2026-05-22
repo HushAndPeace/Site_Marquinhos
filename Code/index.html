@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigues Jr. | Advocacia Criminal Especializada</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header header-white">
+        <div class="container header-content">
+            <a href="#" class="logo-link">
+                <img src="logo.png" alt="Rodrigues Jr. Advogados" class="header-logo">
+            </a>
+            <nav>
+                <a href="#sobre">A Banca</a>
+                <a href="#atuacao">Atuação</a>
+                <a href="#contato" class="btn btn-hover-change">
+                    <span class="btn-text-original">Contato</span>
+                    <span class="btn-text-hover">Clique para seguir</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="tagline">DEFESA TÉCNICA E ESTRATÉGICA</span>
+            <h1>Excelência em <br>Direito Criminal</h1>
+            <p>Atuação combativa e sigilosa nos Tribunais Superiores e Estaduais.</p>
+            <div class="cta-group">
+                <a href="#contato" class="btn btn-gold">Falar com Advogado Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section white-bg">
+        <div class="container split-layout align-center">
+            <div class="text-block">
+                <h2>Defesa Técnica e <span class="gold-text">Dedicada</span></h2>
+                <p class="lead-text">A excelência no Direito Criminal exige mais do que conhecimento jurídico; exige estratégia, combatividade e dedicação exclusiva.</p>
+                <p>O escritório <strong>Rodrigues Jr. Advogados</strong> pauta sua atuação na exclusividade boutique. Limitamos rigorosamente o número de casos ativos para assegurar que cada cliente receba a dedicação direta e irrestrita do sócio.</p>
+            </div>
+            <div class="image-block-single">
+                <img src="advogado-main.png" alt="Dr. Rodrigues Jr. Perfil" class="img-fit shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <section id="atuacao" class="section bg-image-overlay">
+        <div class="section-overlay-dark"></div>
+        <div class="container relative-z">
+            <h2 class="section-title text-light">Áreas de Atuação</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>Inquérito Policial</h3>
+                    <p>Acompanhamento de oitivas e defesa técnica visando o arquivamento do inquérito.</p>
+                </div>
+                <div class="card">
+                    <h3>Liberdade (HC)</h3>
+                    <p>Manejo urgente de Habeas Corpus e pedidos de Revogação de Prisão Preventiva.</p>
+                </div>
+                <div class="card">
+                    <h3>Direito Penal Econômico</h3>
+                    <p>Defesa em crimes tributários, sistema financeiro e lavagem de capitais.</p>
+                </div>
+                <div class="card">
+                    <h3>Tribunais Superiores</h3>
+                    <p>Recursos ao STJ e STF com realização de sustentação oral em Brasília.</p>
+                </div>
+                <div class="card">
+                    <h3>Tribunal do Júri</h3>
+                    <p>Defesa plenária em crimes dolosos contra a vida com oratória combativa.</p>
+                </div>
+                <div class="card">
+                    <h3>Crimes Digitais</h3>
+                    <p>Defesa em delitos informáticos e fraudes eletrônicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="footer">
+        <div class="container">
+            <h2 class="section-title" style="color: #F5F5F5; margin-bottom: 10px;">Plantão Criminal 24h</h2>
+            <p style="opacity: 0.7; margin-bottom: 50px;">Atendimento imediato via WhatsApp.</p>
+
+            <div class="contact-wrapper-3col">
+                <div class="contact-col contact-info">
+                    <div class="info-item">
+                        <strong>WhatsApp:</strong><br> (11) 98739-6154
+                    </div>
+                    <div class="info-item">
+                        <strong>E-mail:</strong><br> contato@dnapenal.com.br
+                    </div>
+                </div>
+
+                <div class="contact-col contact-form-col">
+                    <form id="whatsapp-form">
+                        <input type="text" id="nome" placeholder="Seu Nome" required style="margin-bottom: 10px;">
+                        <input type="tel" id="telefone" placeholder="Seu Telefone" required style="margin-bottom: 10px;">
+                        <textarea id="mensagem" rows="3" placeholder="O caso..." style="margin-bottom: 10px;"></textarea>
+                        <button type="submit" class="btn btn-gold" style="width: 100%;">
+                            ➤ Iniciar Conversa
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-col contact-image-right">
+                    <img src="advogado-tel.png" alt="Atendimento" class="img-fit shadow-md">
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2026 Rodrigues Jr. Advogados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // NÚMERO NOVO ATUALIZADO AQUI
+            const num = "5511987396154"; 
+            
+            const nome = document.getElementById('nome').value;
+            const tel = document.getElementById('telefone').value;
+            const msg = document.getElementById('mensagem').value;
+            const txt = `*Novo Contato Site*:%0A${nome}%0A${tel}%0A${msg}`;
+            window.open(`https://wa.me/${num}?text=${txt}`, '_blank');
+        });
+    </script>
+</body>
+</html>
