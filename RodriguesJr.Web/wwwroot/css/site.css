@@ -897,14 +897,17 @@ a.info-value:hover { color: var(--color-gold); }
     border-top:    2px solid var(--color-gold);
     border-bottom: 2px solid var(--color-gold);
 }
-/* Pilares: cada item vira card branco com borda dourada */
+/* Pilares: sem card box — só texto com divisória dourada vertical */
 :root .stat-item,
 [data-theme="dark"] .stat-item {
-    background:    #ffffff;
-    border:        1px solid rgba(197,160,89,0.45);
-    border-radius: var(--radius);
-    box-shadow:    0 2px 16px rgba(0,0,0,0.12);
+    background:   transparent;
+    border:       none;
+    box-shadow:   none;
+    border-right: 1px solid rgba(197,160,89,0.35);
+    padding:      20px 28px;
 }
+:root .stat-item:last-child,
+[data-theme="dark"] .stat-item:last-child { border-right: none; }
 /* Cards áreas de atuação: fundo branco com borda dourada */
 :root .card,
 [data-theme="dark"] .card {
