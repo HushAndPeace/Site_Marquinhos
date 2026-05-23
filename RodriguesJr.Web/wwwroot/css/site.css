@@ -892,11 +892,13 @@ a.info-value:hover { color: var(--color-gold); }
 
 /* ── MODO ESCURO — overrides específicos ────────────────── */
 /* Stats-bar: bordas douradas sobre fundo branco */
+:root .stats-bar,
 [data-theme="dark"] .stats-bar {
     border-top:    2px solid var(--color-gold);
     border-bottom: 2px solid var(--color-gold);
 }
 /* Pilares: cada item vira card branco com borda dourada */
+:root .stat-item,
 [data-theme="dark"] .stat-item {
     background:    #ffffff;
     border:        1px solid rgba(197,160,89,0.45);
@@ -904,18 +906,25 @@ a.info-value:hover { color: var(--color-gold); }
     box-shadow:    0 2px 16px rgba(0,0,0,0.12);
 }
 /* Cards áreas de atuação: fundo branco com borda dourada */
+:root .card,
 [data-theme="dark"] .card {
-    background:       #ffffff;
+    background:        #ffffff;
     border-left-color: var(--color-gold);
     box-shadow:        0 2px 12px rgba(0,0,0,0.1);
 }
+:root .card h3,
 [data-theme="dark"] .card h3 { color: var(--color-gold); }
+:root .card p,
 [data-theme="dark"] .card p  { color: rgba(26,26,26,0.72); }
+:root .card .card-icon,
 [data-theme="dark"] .card .card-icon { color: var(--color-gold); }
+:root .card.card-highlight,
 [data-theme="dark"] .card.card-highlight {
     background: linear-gradient(145deg, #fff 60%, rgba(197,160,89,0.08) 100%);
 }
+:root .card.card-familia,
 [data-theme="dark"] .card.card-familia       { border-left-color: #7B5A8B; }
+:root .card.card-familia:hover,
 [data-theme="dark"] .card.card-familia:hover { border-left-color: var(--color-gold); }
 
 /* ── MODO CLARO — overrides específicos ─────────────────── */
