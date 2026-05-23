@@ -968,11 +968,22 @@ a.info-value:hover { color: var(--color-gold); }
 }
 [data-theme="light"] .card h3 { color: var(--color-gold); }
 [data-theme="light"] .card p  { color: rgba(255,255,255,0.68); }
+/* Criminal: cards em destaque → vermelho com toque dourado */
 [data-theme="light"] .card.card-highlight {
-    background: linear-gradient(145deg, #111 60%, rgba(197,160,89,0.1) 100%);
+    background:      linear-gradient(to right, rgba(185,28,28,0.22) 0%, #000 40%);
+    border-left-color: #b91c1c;
+    border-left-width: 4px;
+    border-top:        1px solid rgba(185,28,28,0.45);
 }
-[data-theme="light"] .card.card-familia       { border-left-color: #9b6bb5; }
+[data-theme="light"] .card.card-highlight .card-icon { color: #e05252; opacity: 0.9; }
+
+/* Família: cards 4-6 → dourado; cards 1-3 → vermelho */
+[data-theme="light"] .card.card-familia       { border-left-color: var(--color-gold); }
 [data-theme="light"] .card.card-familia:hover { border-left-color: var(--color-gold); }
+[data-theme="light"] #areas-familia .grid-cards .card:nth-child(-n+3) {
+    border-left-color: #b91c1c;
+    border-top:        1px solid rgba(185,28,28,0.35);
+}
 
 /* ── ALTO CONTRASTE — overrides ──────────────────────────── */
 [data-theme="hc"] .hero { background: #000 !important; }
