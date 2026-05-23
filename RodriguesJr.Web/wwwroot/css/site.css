@@ -8,12 +8,12 @@
 html { scroll-behavior: smooth; }
 body { overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 
-/* ── ESCALA DE FONTE ─────────────────────────────────────── */
+/* ── ESCALA DE FONTE — passos de 2px (sm→md→lg→xl: 14→16→18→20) ── */
 html            { font-size: 16px; }
 html[data-font="sm"] { font-size: 14px; }
 html[data-font="md"] { font-size: 16px; }
-html[data-font="lg"] { font-size: 19px; }
-html[data-font="xl"] { font-size: 21px; }
+html[data-font="lg"] { font-size: 18px; }
+html[data-font="xl"] { font-size: 20px; }
 
 /* ── TOKENS — MODO ESCURO (padrão) ──────────────────────── */
 :root,
@@ -86,9 +86,9 @@ html[data-font="xl"] { font-size: 21px; }
     --bg-faq:           #ffffff;
     --bg-footer:        #f0ede6;
 
-    --hero-bg-1:        #0B4157;
-    --hero-bg-2:        #0e2a3d;
-    --hero-dot:         rgba(255,255,255,0.04);
+    --hero-bg-1:        #ffffff;
+    --hero-bg-2:        #f5f5f5;
+    --hero-dot:         rgba(197,160,89,0.06);
 
     --text-page:        #1a1a1a;
     --text-muted:       #777063;
@@ -583,7 +583,7 @@ body {
 }
 .hero h1 {
     font-family: var(--font-impact);
-    font-size: clamp(2.6rem, 5vw, 4.4rem);
+    font-size: clamp(2.3rem, 4.4vw, 3.85rem); /* ≡ clamp original × (14/16) */
     line-height: 1.1; font-weight: 800;
     color: #fff; margin-bottom: 24px;
 }
@@ -920,7 +920,9 @@ a.info-value:hover { color: var(--color-gold); }
 [data-theme="dark"] .card .card-icon { color: var(--color-gold); }
 :root .card.card-highlight,
 [data-theme="dark"] .card.card-highlight {
-    background: linear-gradient(145deg, #fff 60%, rgba(197,160,89,0.08) 100%);
+    background: linear-gradient(to right, rgba(197,160,89,0.13) 0%, #ffffff 35%);
+    border-left-width: 4px;
+    border-top: 1px solid rgba(197,160,89,0.35);
 }
 :root .card.card-familia,
 [data-theme="dark"] .card.card-familia       { border-left-color: #7B5A8B; }
@@ -928,11 +930,29 @@ a.info-value:hover { color: var(--color-gold); }
 [data-theme="dark"] .card.card-familia:hover { border-left-color: var(--color-gold); }
 
 /* ── MODO CLARO — overrides específicos ─────────────────── */
-/* Stats-bar: borda divisória dourada sobre fundo preto */
+/* Hero: fundo branco → textos escuros */
+[data-theme="light"] .hero::before { opacity: 0.4; } /* padrão dourado suave no branco */
+[data-theme="light"] .hero::after  { opacity: 0.25; }
+[data-theme="light"] .hero h1      { color: #1a1a1a; }
+[data-theme="light"] .hero h1 em   { color: var(--color-gold); }
+[data-theme="light"] .hero-sub,
+[data-theme="light"] .hero-sub-2   { color: rgba(26,26,26,0.68); }
+[data-theme="light"] .hero-urgency { color: rgba(26,26,26,0.5); }
+[data-theme="light"] .hero-urgency::before { box-shadow: 0 0 0 3px rgba(76,175,138,0.3); }
+/* Stats-bar: fundo preto mantido, bordas gold, sem boxes nos itens */
 [data-theme="light"] .stats-bar {
     border-top:    2px solid var(--color-gold);
     border-bottom: 2px solid var(--color-gold);
 }
+/* Stat-items: sem card branco — só texto com divisória gold vertical */
+[data-theme="light"] .stat-item {
+    background:   transparent;
+    border:       none;
+    box-shadow:   none;
+    border-right: 1px solid rgba(197,160,89,0.35);
+    padding:      20px 28px;
+}
+[data-theme="light"] .stat-item:last-child { border-right: none; }
 /* Diferenciais: cards pretos com borda e texto ajustados */
 [data-theme="light"] .diferencial-item {
     background: #000;
