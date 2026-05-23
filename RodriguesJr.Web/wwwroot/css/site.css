@@ -64,6 +64,7 @@ html[data-font="xl"] { font-size: 21px; }
     --header-h:         0px;
     --font-heading:     'Cormorant Garamond', Georgia, serif;
     --font-body:        'Manrope', system-ui, sans-serif;
+    --font-impact:      'Montserrat', Arial, sans-serif;
 
     /* Nav lateral */
     --bg-nav-pill:      rgba(17,21,25,0.85);
@@ -73,17 +74,17 @@ html[data-font="xl"] { font-size: 21px; }
 
 /* ── TOKENS — MODO CLARO ─────────────────────────────────── */
 [data-theme="light"] {
-    --bg-page:          #f7f5f0;
-    --bg-surface:       #edeae3;
-    --bg-header:        rgba(247,245,240,0.97);
+    --bg-page:          #ffffff;
+    --bg-surface:       #ffffff;
+    --bg-header:        rgba(255,255,255,0.97);
     --bg-card:          #ffffff;
     --bg-card-hover:    #fafafa;
-    --bg-stats:         #ffffff;
-    --stat-text-main:   #1a1a1a;
-    --stat-text-muted:  rgba(26,26,26,0.55);
+    --bg-stats:         #000000;
+    --stat-text-main:   #ffffff;
+    --stat-text-muted:  rgba(255,255,255,0.65);
     --bg-steps:         #ffffff;
-    --bg-faq:           #edeae3;
-    --bg-footer:        #e5e2db;
+    --bg-faq:           #ffffff;
+    --bg-footer:        #f0ede6;
 
     --hero-bg-1:        #0B4157;
     --hero-bg-2:        #0e2a3d;
@@ -104,7 +105,7 @@ html[data-font="xl"] { font-size: 21px; }
     --input-bg:         rgba(0,0,0,0.04);
     --input-text:       #1a1a1a;
 
-    --color-sobre-h2:   #0B4157;
+    --color-sobre-h2:   #1a1a1a;
 
     --shadow-card:      0 2px 12px rgba(0,0,0,0.08);
     --shadow-card-h:    0 8px 32px rgba(0,0,0,0.14), 0 0 0 1px rgba(11,65,87,0.1);
@@ -566,6 +567,7 @@ body {
 .hero-text { max-width: 540px; }
 .tagline {
     display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-impact);
     font-size: 0.92rem; font-weight: 800; letter-spacing: 4.5px; text-transform: uppercase;
     color: var(--color-gold); margin-bottom: 24px;
 }
@@ -573,10 +575,16 @@ body {
     content: ''; display: block; width: 20px; height: 1px;
     background: var(--color-gold);
 }
+/* Tagline de duas linhas (ex: página Criminal) */
+.tagline--stack {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
 .hero h1 {
-    font-family: var(--font-heading);
-    font-size: clamp(2.4rem, 4.5vw, 4rem);
-    line-height: 1.08; font-weight: 700;
+    font-family: var(--font-impact);
+    font-size: clamp(2.6rem, 5vw, 4.4rem);
+    line-height: 1.1; font-weight: 800;
     color: #fff; margin-bottom: 24px;
 }
 .hero h1 em { font-style: italic; color: var(--color-gold); }
@@ -586,6 +594,11 @@ body {
 }
 .hero-sub-2 { margin-top: -20px; color: rgba(255,255,255,0.55); }
 .cta-group { display: flex; gap: 14px; flex-wrap: wrap; }
+.cta-group .btn {
+    padding: 18px 48px;
+    font-size: 0.96rem;
+    letter-spacing: 1.6px;
+}
 .hero-urgency {
     display: inline-flex; align-items: center; gap: 10px;
     font-size: 0.8rem; color: rgba(255,255,255,0.45);
@@ -669,8 +682,10 @@ body {
     border-bottom: 1px solid var(--border-subtle);
 }
 .stats-grid {
-    display: grid; grid-template-columns: repeat(3,1fr);
-    gap: 20px; text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 320px));
+    justify-content: center;
+    gap: 24px; text-align: center;
 }
 .stat-item { padding: 20px 12px; }
 
@@ -875,6 +890,61 @@ a.info-value:hover { color: var(--color-gold); }
 }
 .dev-credit { display: block; font-size: 0.7rem; margin-top: 4px; opacity: 0.6; }
 
+/* ── MODO ESCURO — overrides específicos ────────────────── */
+/* Stats-bar: bordas douradas sobre fundo branco */
+[data-theme="dark"] .stats-bar {
+    border-top:    2px solid var(--color-gold);
+    border-bottom: 2px solid var(--color-gold);
+}
+/* Pilares: cada item vira card branco com borda dourada */
+[data-theme="dark"] .stat-item {
+    background:    #ffffff;
+    border:        1px solid rgba(197,160,89,0.45);
+    border-radius: var(--radius);
+    box-shadow:    0 2px 16px rgba(0,0,0,0.12);
+}
+/* Cards áreas de atuação: fundo branco com borda dourada */
+[data-theme="dark"] .card {
+    background:       #ffffff;
+    border-left-color: var(--color-gold);
+    box-shadow:        0 2px 12px rgba(0,0,0,0.1);
+}
+[data-theme="dark"] .card h3 { color: var(--color-gold); }
+[data-theme="dark"] .card p  { color: rgba(26,26,26,0.72); }
+[data-theme="dark"] .card .card-icon { color: var(--color-gold); }
+[data-theme="dark"] .card.card-highlight {
+    background: linear-gradient(145deg, #fff 60%, rgba(197,160,89,0.08) 100%);
+}
+[data-theme="dark"] .card.card-familia       { border-left-color: #7B5A8B; }
+[data-theme="dark"] .card.card-familia:hover { border-left-color: var(--color-gold); }
+
+/* ── MODO CLARO — overrides específicos ─────────────────── */
+/* Stats-bar: borda divisória dourada sobre fundo preto */
+[data-theme="light"] .stats-bar {
+    border-top:    2px solid var(--color-gold);
+    border-bottom: 2px solid var(--color-gold);
+}
+/* Diferenciais: cards pretos com borda e texto ajustados */
+[data-theme="light"] .diferencial-item {
+    background: #000;
+    border-color: rgba(197,160,89,0.35);
+}
+[data-theme="light"] .diferencial-item h3 { color: var(--color-gold); }
+[data-theme="light"] .diferencial-item p  { color: rgba(255,255,255,0.68); }
+/* Especialidades: cards pretos com borda dourada */
+[data-theme="light"] .card {
+    background:    #000;
+    border-left-color: var(--color-gold);
+    box-shadow: none;
+}
+[data-theme="light"] .card h3 { color: var(--color-gold); }
+[data-theme="light"] .card p  { color: rgba(255,255,255,0.68); }
+[data-theme="light"] .card.card-highlight {
+    background: linear-gradient(145deg, #111 60%, rgba(197,160,89,0.1) 100%);
+}
+[data-theme="light"] .card.card-familia       { border-left-color: #9b6bb5; }
+[data-theme="light"] .card.card-familia:hover { border-left-color: var(--color-gold); }
+
 /* ── ALTO CONTRASTE — overrides ──────────────────────────── */
 [data-theme="hc"] .hero { background: #000 !important; }
 [data-theme="hc"] .hero::before { display: none; }
@@ -945,6 +1015,7 @@ a.info-value:hover { color: var(--color-gold); }
     .cta-group .btn { width: 100%; max-width: 340px; }
     .hero-urgency { justify-content: center; }
     .tagline      { justify-content: center; }
+    .tagline--stack { align-items: center; }
     .hero-photo   { max-width: 240px; max-height: 320px; margin: 0 auto; }
     .hero-photo-frame::before { display: none; }
     .hero-scroll-hint { display: none; }
